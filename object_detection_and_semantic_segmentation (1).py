@@ -13,11 +13,14 @@ from ultralytics import YOLO
 import cv2
 import matplotlib.pyplot as plt
 
+#Using a YOLOv8 model(updated version)
+
 det_model = YOLO('yolov8x.pt')
 
 
 seg_model = YOLO('yolov8x-seg.pt')
 
+#Object Detection
 from google.colab import files
 import cv2
 import matplotlib.pyplot as plt
@@ -46,6 +49,7 @@ plt.imshow(result_img)
 plt.axis('off')
 plt.show()
 
+#Semantic Segmentation
 seg_results = seg_model.predict(img_rgb)
 
 
